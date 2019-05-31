@@ -77,10 +77,10 @@
         </tr>
         </thead>
         <tbody>
-        <tr th:each="contact:${contacts}">
-            <th th:text="${contact.id}"></th>
-            <td th:text="${contact.firstName}"></td>
-            <td th:text="${contact.lastName}"></td>
+        <tr th:each="contact:${user}">
+            <th th:text="${user.id}"></th>
+            <td th:text="${user.firstName}"></td>
+            <td th:text="${user.lastName}"></td>
         </tr>
         </tbody>
     </table>
