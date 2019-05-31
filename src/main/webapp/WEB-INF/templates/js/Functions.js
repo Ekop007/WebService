@@ -1,8 +1,4 @@
 function GoToPage(ref) {
-    localStorage.ln = arrUsers.length;
-    localStorage.cur = cur;
-    var parsed = JSON.stringify(arrUsers);
-    localStorage.setItem("Users", parsed);
     document.location.href = ref;
 }
 
@@ -15,28 +11,27 @@ function LoadArr() {
 }
 
 function CheckPas(name, pas1, pas2, em) {
+    LoadArr();
     if (name !== "" && em !== "" && pas1 !== "" && pas2 !== "") {
         if (pas1 === pas2) {
             AddUser(name, pas1, em);
             AddMoneyStorage('cash', 'cash', '00000000000000', 0);
-            localStorage.t = 1;
         }
         else {
             alert("Пароли не совпадают");
-            localStorage.t = 0;
         }
     }
     else
     {
         alert("Заполните все поля ввода!");
-        localStorage.t = 0;
     }
 }
 
 function CheckIn(name, pas) {
+    LoadArr();
     var t = arrUsers.length;
     if (name !== "" && pas !== "") {
-        for (var i = 0; i < arrUsers.length; ++i)
+        for (var i = 0; i < localStorage.arrUsers.length; ++i)
         {
             if (arrUsers[i].password === pas && (arrUsers[i].userName === name || arrUsers[i].userEmail === name))
             {
@@ -62,6 +57,10 @@ function AddUser(name, pas, em) {
     var user = new UsersSpace(name, pas, em);
     arrUsers.push(user);
     cur = arrUsers.length - 1;
+    localStorage.ln = arrUsers.length;
+    localStorage.cur = cur;
+    var parsed = JSON.stringify(arrUsers);
+    localStorage.setItem("Users", parsed);
 }
 
 function AddMoneyStorage(name, type, number, cash) {

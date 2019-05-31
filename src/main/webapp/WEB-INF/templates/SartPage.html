@@ -15,56 +15,42 @@
     <script type="text/javascript" src="js/Functions.js">
     </script>
     <title>Учет личных финансов</title>
+    <style>
+        body {
+            background-color: white;
+        }
+    </style>
 </head>
-<body class="start">
-    <div class="container">
-        <div class="form">
-            <div class="row" style="background: aqua">
-                <div class="col-1-5"> </div>
-                <div class="col-3-5">
-                    <h1> Сайт учета личных финансов </h1>
-                </div>
-                <div class="col-1-5"> </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col" style="text-align: center" id="colst1">
-                <p class="ref"><a style="font-size: 24px" href="Sing.html"> Войти </a></p>
-            </div>
-            <div class="col" style="text-align: center" id="colst1">
-                <p class="ref" style="font-size: 24px"><a href="Registered.html"> Зарегистрироваться </a></p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col" style="background: white">
-                <p style="text-align: center"><img src="Img/Fin.jpeg" alt=""></p>
-            </div>
-        </div>
-        <div class="form">
-            <div class="row">
-                <div class="col">
-                    <h3 class="textpos"> Данный сайт был создан для упрощения ведения учета
-                        финансовых операций. Сайт имеет следующие возможности.</h3>
-                </div>
-            </div>
-        </div>
-        <br>
-        <div class="form-group">
-            <div class="row">
-                <div class="col" id="colst1">
-                    <h5 class="textpos"> Добавление и удаление банковских карт и сберегательных счетов.</h5>
-                </div>
-                <div class="col" id="colst1">
-                    <h5 class="textpos"> Редактирование банковских карт и сберегательных счетов.</h5>
-                </div>
-                <div class="col" id="colst1">
-                    <h5 class="textpos"> Управление расходами.</h5>
-                </div>
-                <div class="col" id="colst1" style="">
-                    <h5 class="textpos"> Редактирование шаблонов операций.</h5>
-                </div>
-            </div>
-        </div>
+
+<body>
+<nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+    <h3 class="navbar-brand">Сайт учета личных финансов</h3>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="Sing.html">Войти<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="Registered.html">Зарегестрироваться<span class="sr-only">(current)</span></a>
+            </li>
+        </ul>
     </div>
+</nav>
+<br><br><br><br>
+<main class="container">
+    <h3 class="textpos"> Данный сайт был создан для упрощения ведения учета
+            финансовых операций. Сайт имеет следующие возможности.</h3>
+<ol class="rectangle">
+    <li><a href="#">Добавление и удаление банковских карт и сберегательных счетов</a></li>
+    <li><a href="#">Редактирование банковских карт и сберегательных счетов</a></li>
+    <li><a href="#">Управление расходами</a></li>
+    <li><a href="#">Редактирование шаблонов операций</a></li>
+    <li><a href="#">Просмотр всех операций</a></li>
+</ol>
+</main>
 </body>
 </html>
