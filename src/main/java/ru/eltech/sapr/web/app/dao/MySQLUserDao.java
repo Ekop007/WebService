@@ -10,11 +10,11 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class H2UserDao implements UserDaoInterface
+public class MySQLUserDao implements UserDaoInterface
 {
     private final DataSource dataSource;
 
-    public H2UserDao (DataSource dataSource)
+    public MySQLUserDao(DataSource dataSource)
     {
         this.dataSource = dataSource;
     }

@@ -11,11 +11,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-public class H2MoneyBagDao implements MoneyBagDaoInterface
+public class MySQLMoneyBagDao implements MoneyBagDaoInterface
 {
     private final DataSource dataSource;
 
-    public H2MoneyBagDao(DataSource dataSource)
+    public MySQLMoneyBagDao(DataSource dataSource)
     {
         this.dataSource = dataSource;
     }

@@ -20,16 +20,16 @@ public class AddUserServlet extends HttpServlet
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         try {
-            UserService service = (UserService) getServletContext().getAttribute(UserService.SERVICE_NAME);
+                UserService service = (UserService) getServletContext().getAttribute(UserService.SERVICE_NAME);
 
-            String firstName = req.getParameter("first_name");
-            String lastName = req.getParameter("last_name");
-            String email = req.getParameter("email");
-            String password = req.getParameter("password");
+                String firstName = req.getParameter("first_name");
+                String lastName = req.getParameter("last_name");
+                String email = req.getParameter("email");
+                String password = req.getParameter("password");
 
-            User user = service.createUser(firstName, lastName, email, password, UserType.User);
-            // TODO: validate contact is created
-            resp.sendRedirect("/");
+                User user = service.createUser(firstName, lastName, email, password, UserType.User);
+
+                resp.sendRedirect("/");
         } catch (UserServiceException e) {
             resp.sendError(500, "Unable to create contact");
         }

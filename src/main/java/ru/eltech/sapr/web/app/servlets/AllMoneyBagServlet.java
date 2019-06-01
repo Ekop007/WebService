@@ -1,5 +1,4 @@
 package ru.eltech.sapr.web.app.servlets;
 
-public class AddTransactionServlet
-{
+public class AllMoneyBagServlet {
 }
