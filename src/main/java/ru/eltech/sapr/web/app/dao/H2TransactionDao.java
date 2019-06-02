@@ -9,11 +9,11 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class MySQLTransactionDao implements TransactionDaoInterface
+public class H2TransactionDao implements TransactionDaoInterface
 {
     private final DataSource dataSource;
 
-    public MySQLTransactionDao(DataSource dataSource)
+    public H2TransactionDao(DataSource dataSource)
     {
         this.dataSource = dataSource;
     }
