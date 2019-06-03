@@ -1,5 +1,6 @@
 package ru.eltech.sapr.web.app.service;
 
+import ru.eltech.sapr.web.app.dao.TransactionDaoInterface;
 import ru.eltech.sapr.web.app.model.Transaction;
 import ru.eltech.sapr.web.app.dao.TransactionDao;
 
@@ -7,7 +8,9 @@ import java.util.List;
 
 public class TransactionService implements TransactionServiceInterface
 {
-    private TransactionDao data = new TransactionDao();
+    private TransactionDaoInterface data;
+
+    public TransactionService(TransactionDaoInterface interf) { this.data = interf; }
 
     @Override
     public List<Transaction> getTransaction(long user)

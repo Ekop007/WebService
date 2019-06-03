@@ -1,6 +1,6 @@
 package ru.eltech.sapr.web.app.service;
 
-import ru.eltech.sapr.web.app.dao.MoneyBagDao;
+import ru.eltech.sapr.web.app.dao.MoneyBagDaoInterface;
 import ru.eltech.sapr.web.app.model.MoneyBag;
 import ru.eltech.sapr.web.app.model.MoneyBagType;
 
@@ -8,7 +8,10 @@ import java.util.List;
 
 public class MoneyBagService implements MoneyBagServiceInterface
 {
-    private MoneyBagDao data = new MoneyBagDao();
+    private MoneyBagDaoInterface data;
+
+    public MoneyBagService(MoneyBagDaoInterface interf) { this.data = interf; }
+
 
     @Override
     public List<MoneyBag> getMoneyBags(long user)

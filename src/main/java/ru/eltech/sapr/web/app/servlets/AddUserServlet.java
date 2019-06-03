@@ -14,7 +14,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-@WebServlet("/add")
+@WebServlet("/registered")
 public class AddUserServlet extends HttpServlet
 {
     @Override
@@ -29,7 +29,7 @@ public class AddUserServlet extends HttpServlet
 
                 User user = service.createUser(firstName, lastName, email, password, UserType.User);
 
-                resp.sendRedirect("/");
+                resp.sendRedirect("/Statistic.html");
         } catch (UserServiceException e) {
             resp.sendError(500, "Unable to create contact");
         }

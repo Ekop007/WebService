@@ -1,5 +1,6 @@
 package ru.eltech.sapr.web.app.service;
 
+import ru.eltech.sapr.web.app.dao.UserDaoInterface;
 import ru.eltech.sapr.web.app.model.User;
 import ru.eltech.sapr.web.app.dao.UserDao;
 import ru.eltech.sapr.web.app.model.UserType;
@@ -8,7 +9,9 @@ import java.util.List;
 
 public class UserService implements UserServiceInterface
 {
-    private UserDao data = new UserDao();
+    private UserDaoInterface data;
+
+    public UserService(UserDaoInterface interf) { this.data = interf; }
 
     @Override
     public List<User> getUsers()
