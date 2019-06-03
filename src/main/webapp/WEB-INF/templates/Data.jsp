@@ -79,7 +79,7 @@
             </div>
             <div class="row">
                 <div class="col">
-                    <button type="submit" class="btn btn-primary btn-block" onclick=" SaveStorage(); GoToPage('Score.html')"> Сохранить </button>
+                    <button type="submit" class="btn btn-primary btn-block" onclick=" SaveStorage(); GoToPage('Score.jsp')"> Сохранить </button>
                 </div>
             </div>
             <div class="row">

@@ -29,7 +29,7 @@ public class AddUserServlet extends HttpServlet
 
                 User user = service.createUser(firstName, lastName, email, password, UserType.User);
 
-                resp.sendRedirect("/Statistic.html");
+                resp.sendRedirect("/Statistic.jsp");
         } catch (UserServiceException e) {
             resp.sendError(500, "Unable to create contact");
         }

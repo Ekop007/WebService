@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
 <head>
@@ -79,7 +78,7 @@
                                 <button type="submit" class="btn btn-primary btn-block" onclick="GetValues(); Go()"> Войти  </button>
                             </div> <!-- form-group// -->
                             <p class="text-center"><a href="#" class="btn">Забыли пароль?</a></p>
-                            <p class="text-center"><a href="Registered.html" class="btn">Регистрация</a></p>
+                            <p class="text-center"><a href="Registered.jsp" class="btn">Регистрация</a></p>
                         </form>
                     </article>
                 </div> <!-- card.// -->

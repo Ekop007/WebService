@@ -86,12 +86,12 @@
                                         var pas1 = document.getElementsByClassName("form-control")[2].value;
                                         var pas2 = document.getElementsByClassName("form-control")[3].value;
                                         CheckPas(name, pas1, pas2, em);
-                                        GoToPage('Statistic.html');
+                                        GoToPage('Statistic.jsp');
                                     }
                                 </script>
                                 <button type="submit" class="btn btn-primary btn-block" onclick="GetValues()"> Регистрация  </button>
                             </div> <!-- form-group// -->
-                            <p class="text-center"> Есть аккаунт? <br><a href="Sing.html" class="btn"> Войти </a></p>
+                            <p class="text-center"> Есть аккаунт? <br><a href="Sing.jsp" class="btn"> Войти </a></p>
                         </form>
                     </article>
                 </div> <!-- card.// -->

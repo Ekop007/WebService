@@ -10,10 +10,12 @@ import ru.eltech.sapr.web.app.service.UserService;
 
 import javax.servlet.ServletContextEvent;
 import javax.servlet.ServletContextListener;
+import javax.servlet.annotation.WebListener;
 import javax.sql.DataSource;
 import java.io.IOException;
 
-public class ServiceIntializerServlet implements ServletContextListener {
+@WebListener
+public class ServiceInitializer implements ServletContextListener {
     @Override
     public void contextInitialized(ServletContextEvent sce) {
         try {
